@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="weather">
+    <div class="container">
+        <h1>Weather in <span id="city-name"></span></h1>
+        <p>Temperature: <span id="temperature"></span> Kelvin</p>
+        <p>made with ❣️ by siddharth </p>
+        <a href="/">Go back</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const cityName = params.get('city');
+        const temperature = params.get('temp');
+
+        document.getElementById('city-name').innerText = cityName;
+        document.getElementById('temperature').innerText = temperature;
+
+        const temp = parseFloat(temperature);
+        const bodyClass = temp > 300 ? 'sunny' : (temp > 273 ? 'cloudy' : 'snowy');
+        document.body.classList.add(bodyClass);
+    </script>
+</body>
+</html>
