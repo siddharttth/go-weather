@@ -6,7 +6,6 @@ Welcome to the Go Weather App! This project is a simple web application that all
 - [Features](#-features)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [License](#-license)
 
 ## ✨ Features
 - 🌍 **City Weather Information**: Get the current temperature for any city.
